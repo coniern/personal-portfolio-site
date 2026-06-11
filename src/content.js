@@ -5,247 +5,294 @@ export const siteData = {
       role: "全栈开发工程师 / AI 应用工程师",
       email: "2325826552@qq.com",
       github: "https://github.com/coniern",
+      githubHandle: "coniern",
     },
     nav: [
       { id: "hero", label: "首页" },
+      { id: "about", label: "关于" },
       { id: "work", label: "作品" },
+      { id: "archive", label: "仓库" },
       { id: "resume", label: "简历" },
       { id: "contact", label: "联系" },
     ],
     hero: {
-      kicker: "FULL-STACK + AI",
-      title: ["做更完整的", "数字产品。"],
+      eyebrow: "portfolio notes / handwritten edition",
+      title: ["把仓库", "做成作品。"],
       subtitle:
-        "我做的不只是页面，也包括后端、仓库整理、项目包装和 AI 能力接入。目标是做出真正能交付、能展示、能说明价值的产品。",
-      badges: ["React / Vue", "Java / Spring Boot", "AI 工作流", "仓库治理"],
-      primary: "查看作品",
-      secondary: "联系我",
+        "我在意的不只是页面做得好不好看，而是一个项目能不能被讲清楚、被完整交付、被别人一眼看出它真正的能力边界。",
+      badges: ["React", "Vue", "Java", "AI Workflows"],
+      notes: [
+        "12 个公开仓库，全部收录",
+        "主区精选 8 个更适合作品集展示的项目",
+        "网页风格参考纸上手稿，而不是科技产品页",
+      ],
+      primary: "看精选作品",
+      secondary: "进入全部仓库",
     },
-    introCards: [
+    about: {
+      label: "关于我",
+      title: "我想做的，是把项目从代码变成一页有表达力的作品。",
+      note: "手写、手绘、留白，并不是装饰。它们是在帮内容呼吸，也帮作品被记住。",
+      cards: [
+        {
+          id: "delivery",
+          title: "交付感",
+          body: "我会同时关心界面、流程、代码结构、仓库整理和最终展示，而不是只完成一个局部。",
+        },
+        {
+          id: "clarity",
+          title: "表达力",
+          body: "一个项目不只是运行起来，还要能被别人快速看懂，知道它为什么值得继续点进去。",
+        },
+        {
+          id: "systems",
+          title: "系统感",
+          body: "我更喜欢把零散功能整理成完整作品，给它清楚的边界、结构和讲述方式。",
+        },
+      ],
+    },
+    works: {
+      label: "精选作品",
+      title: "主区只放最能代表我当前能力和表达方式的仓库。",
+      note: "卡片统一使用黑白灰抽象封面，不依赖真实截图，保证整体气质稳定。",
+    },
+    featuredProjects: [
       {
-        id: "delivery",
-        title: "交付",
-        body:
-          "从界面、接口、业务流程到仓库结构，我更关心的是能不能把事情完整做完。",
-      },
-      {
-        id: "ai",
-        title: "AI",
-        body:
-          "我把 AI 当成产品能力来设计，而不是单独塞一个聊天框就结束。",
-      },
-      {
-        id: "craft",
-        title: "表达",
-        body:
-          "好的项目不仅要能运行，还要能被别人看懂、记住、愿意点进去继续看。",
-      },
-    ],
-    projects: [
-      {
-        id: "meow-cup",
+        id: "meow-cup-landing",
         index: "01",
         title: "Meow Cup Landing",
+        description:
+          "把陶瓷猫杯的视觉页面做成更完整的 editorial landing page，重点在图像叙事、节奏控制和页面气质。",
         stack: "React / GSAP / Vite",
-        summary:
-          "把一个产品视觉页重构成更完整的品牌落地页，重点优化图片叙事、动效节奏和移动端结构。",
-        bullets: [
-          "围绕图片内容做版式，而不是机械堆模块",
-          "调整视觉层级和动效节奏",
-          "拆分内容、组件和动画逻辑",
-        ],
+        category: "前端叙事",
+        coverType: "editorial",
         repo: "https://github.com/coniern/meow-cup-landing",
       },
       {
-        id: "thesis-management",
+        id: "live-body-glass",
         index: "02",
+        title: "Live Body Glass",
+        description:
+          "用 MediaPipe、p5.js 和 WebGL 做实时浏览器侧身体透明实验，适合展示创意编码和交互视觉能力。",
+        stack: "JavaScript / MediaPipe / WebGL",
+        category: "创意实验",
+        coverType: "vision",
+        repo: "https://github.com/coniern/live-body-glass",
+      },
+      {
+        id: "thesis-management-system",
+        index: "03",
         title: "Thesis Management System",
+        description:
+          "覆盖管理员、教师、学生三类角色的毕业论文管理系统，体现真实业务流、权限与流程组织能力。",
         stack: "Vue 3 / Spring Boot / MySQL",
-        summary:
-          "毕业论文管理系统，覆盖管理员、教师、学生三类角色的选题、进度、上传与管理流程。",
-        bullets: [
-          "是真实业务流，不只是前端展示",
-          "体现前后端协同和中后台能力",
-          "仓库说明和结构已整理成可展示状态",
-        ],
+        category: "全栈系统",
+        coverType: "system",
         repo: "https://github.com/coniern/Thesis-management-system",
       },
       {
-        id: "project-platform",
-        index: "03",
-        title: "Project Management Platform",
+        id: "clairvault-tasks",
+        index: "04",
+        title: "Clairvault Tasks",
+        description:
+          "以 Vue 3 和 Pinia 搭建的任务管理作品，偏向个人 productivity app 的结构与交互表达。",
+        stack: "Vue 3 / Pinia / UI Design",
+        category: "产品练习",
+        coverType: "productivity",
+        repo: "https://github.com/coniern/clairvault-tasks",
+      },
+      {
+        id: "project-javaweb-system",
+        index: "05",
+        title: "Project JavaWeb System",
+        description:
+          "更偏后端理解的 Java Web 项目，用来展示系统结构梳理、旧仓库清理和项目包装能力。",
         stack: "Java / Spring Boot / JSP",
-        summary:
-          "项目管理平台原型，用来展示 Java 后端结构理解和旧仓库清理重构能力。",
-        bullets: [
-          "适合体现 Java 后端项目理解",
-          "反映技术债处理和仓库治理意识",
-          "README 和垃圾文件已显著清理",
-        ],
+        category: "后端结构",
+        coverType: "backend",
         repo: "https://github.com/coniern/project-JavaWeb-system",
+      },
+      {
+        id: "vue-rabbit",
+        index: "06",
+        title: "Vue Rabbit",
+        description:
+          "电商方向的 Vue 项目练习，适合展示中大型前端项目组织、页面拆分和业务化界面处理。",
+        stack: "Vue / Commerce UI",
+        category: "前端业务",
+        coverType: "commerce",
+        repo: "https://github.com/coniern/vue-rabbit",
+      },
+      {
+        id: "linear-regression-practice",
+        index: "07",
+        title: "Linear Regression Practice",
+        description:
+          "把线性回归的学习过程整理成可展示仓库，展示算法学习与实验记录被包装成作品的方式。",
+        stack: "Python / ML Notes",
+        category: "AI 学习",
+        coverType: "ml",
+        repo: "https://github.com/coniern/linear-regression-practice",
+      },
+      {
+        id: "personal-portfolio-site",
+        index: "08",
+        title: "Personal Portfolio Site",
+        description:
+          "个人作品集网站本身，体现我如何把仓库、文案、视觉和信息架构整合成一个完整出口。",
+        stack: "React / Vite / Portfolio Design",
+        category: "自我表达",
+        coverType: "portfolio",
+        repo: "https://github.com/coniern/personal-portfolio-site",
+      },
+    ],
+    archive: {
+      label: "全部仓库",
+      title: "公开仓库不只精选那几项，我把它们全部留在这里。",
+      note: "精选区强调代表性；这里保留完整轨迹，包括重复版本、实验仓库和练习项目。",
+    },
+    repoArchive: [
+      {
+        id: "clairvault-tasks",
+        label: "clairvault-tasks",
+        description: "Glassmorphism ToDo portfolio app built with Vue 3 and Pinia.",
+        language: "Vue",
+        type: "精选作品",
+        repo: "https://github.com/coniern/clairvault-tasks",
+      },
+      {
+        id: "live-body-glass",
+        label: "live-body-glass",
+        description: "Realtime browser-side body invisibility effect with MediaPipe, p5.js, and WebGL.",
+        language: "JavaScript",
+        type: "精选作品",
+        repo: "https://github.com/coniern/live-body-glass",
+      },
+      {
+        id: "personal-portfolio-site",
+        label: "personal-portfolio-site",
+        description: "Personal portfolio website for Tongxue Xiao.",
+        language: "JavaScript",
+        type: "精选作品",
+        repo: "https://github.com/coniern/personal-portfolio-site",
+      },
+      {
+        id: "meow-cup-landing",
+        label: "meow-cup-landing",
+        description: "Editorial product landing page for a ceramic cat cup.",
+        language: "JavaScript",
+        type: "精选作品",
+        repo: "https://github.com/coniern/meow-cup-landing",
+      },
+      {
+        id: "Thesis-management-system",
+        label: "Thesis-management-system",
+        description: "毕业论文管理系统。",
+        language: "Vue",
+        type: "精选作品",
+        repo: "https://github.com/coniern/Thesis-management-system",
+      },
+      {
+        id: "Graduation-Thesis-Management-System",
+        label: "Graduation-Thesis-Management-System",
+        description: "毕业论文系统的较早版本仓库，作为过程轨迹保留。",
+        language: "Vue",
+        type: "归档版本",
+        repo: "https://github.com/coniern/Graduation-Thesis-Management-System",
+      },
+      {
+        id: "project-JavaWeb-system",
+        label: "project-JavaWeb-system",
+        description: "Javaweb 代码托管网站平台。",
+        language: "Java",
+        type: "精选作品",
+        repo: "https://github.com/coniern/project-JavaWeb-system",
+      },
+      {
+        id: "linear-regression-practice",
+        label: "linear-regression-practice",
+        description: "线性回归实战与 AI 学习记录。",
+        language: "Python",
+        type: "精选作品",
+        repo: "https://github.com/coniern/linear-regression-practice",
+      },
+      {
+        id: "vue-rabbit-2026",
+        label: "vue-rabbit-2026",
+        description: "小兔鲜项目的 2026 练习版本。",
+        language: "Vue",
+        type: "迭代版本",
+        repo: "https://github.com/coniern/vue-rabbit-2026",
+      },
+      {
+        id: "vue-rabbit",
+        label: "vue-rabbit",
+        description: "小兔鲜项目主练习仓库。",
+        language: "Vue",
+        type: "精选作品",
+        repo: "https://github.com/coniern/vue-rabbit",
+      },
+      {
+        id: "demo",
+        label: "demo",
+        description: "混合练习与实验内容的综合仓库。",
+        language: "Mixed",
+        type: "实验仓库",
+        repo: "https://github.com/coniern/demo",
+      },
+      {
+        id: "scratch-repo",
+        label: "-",
+        description: "极简占位 / scratch 仓库，作为公开历史保留。",
+        language: "Unknown",
+        type: "占位仓库",
+        repo: "https://github.com/coniern/-",
       },
     ],
     resume: {
-      title: "简历摘要",
-      subtitle: "偏全栈和 AI 应用方向。",
-      positioning:
-        "我擅长把前端、后端、产品表达、仓库包装和 AI 落地整合成一个完整产出。",
-      roles: [
-        "全栈开发工程师",
-        "AI 应用工程师",
-        "偏产品与交互的前端工程师",
-        "创业团队通才型工程师",
-      ],
-      skills: [
+      label: "简历摘要",
+      title: "我更适合那种既要工程，也要表达，还要把东西真的做完的场景。",
+      note: "比起只会做一个点，我更像把前端、后端、仓库整理和项目包装串起来的人。",
+      cards: [
         {
-          title: "前端",
-          text: "React / Vue 3 / Vite / GSAP / 响应式布局 / Element Plus",
+          id: "positioning",
+          title: "个人定位",
+          body: "偏全栈，也偏产品表达。擅长把功能、结构、界面和仓库展示整合成一个完整输出。",
         },
         {
-          title: "后端",
-          text: "Java / Spring Boot / Node.js / REST API / JWT / MyBatis Plus",
+          id: "roles",
+          title: "目标岗位",
+          items: [
+            "全栈开发工程师",
+            "AI 应用工程师",
+            "偏产品与交互的前端工程师",
+            "创业团队通才型工程师",
+          ],
         },
         {
-          title: "AI / 工作流",
-          text: "Prompt 设计 / LLM 接入 / 工作流自动化 / AI 产品能力嵌入",
+          id: "stack",
+          title: "技术栈",
+          groups: [
+            {
+              title: "Frontend",
+              text: "React / Vue 3 / Vite / GSAP / 响应式布局 / 页面叙事",
+            },
+            {
+              title: "Backend",
+              text: "Java / Spring Boot / Node.js / REST API / JWT / MyBatis Plus",
+            },
+            {
+              title: "AI / Workflow",
+              text: "Prompt 设计 / LLM 接入 / 工作流自动化 / AI 产品能力嵌入",
+            },
+          ],
         },
       ],
     },
     contact: {
-      title: "联系我",
-      subtitle: "欢迎全栈、前端、AI 应用相关机会。",
-      links: [
-        {
-          label: "邮箱",
-          value: "2325826552@qq.com",
-          href: "mailto:2325826552@qq.com",
-        },
-        {
-          label: "GitHub",
-          value: "github.com/coniern",
-          href: "https://github.com/coniern",
-        },
-      ],
-      actionTitle: "留下一个入口。",
-      actionBody: "如果你在找能把产品、代码、仓库和表达都一起做完整的人，可以直接联系我。",
-      actionButton: "现在联系",
-    },
-  },
-  en: {
-    meta: {
-      name: "Tongxue Xiao",
-      role: "Full-Stack Developer / AI Application Engineer",
-      email: "2325826552@qq.com",
-      github: "https://github.com/coniern",
-    },
-    nav: [
-      { id: "hero", label: "Home" },
-      { id: "work", label: "Work" },
-      { id: "resume", label: "Resume" },
-      { id: "contact", label: "Contact" },
-    ],
-    hero: {
-      kicker: "FULL-STACK + AI",
-      title: ["Build better", "digital products."],
-      subtitle:
-        "I work across interface design, backend systems, repository cleanup, and AI feature integration. The goal is software that can be shipped, explained, and remembered.",
-      badges: ["React / Vue", "Java / Spring Boot", "AI workflows", "Repo cleanup"],
-      primary: "View work",
-      secondary: "Contact me",
-    },
-    introCards: [
-      {
-        id: "delivery",
-        title: "Delivery",
-        body:
-          "From interface, API, and workflow to repository structure, I care about finishing the whole thing well.",
-      },
-      {
-        id: "ai",
-        title: "AI",
-        body:
-          "I treat AI as product capability, not as a one-off feature dropped into a page.",
-      },
-      {
-        id: "craft",
-        title: "Clarity",
-        body:
-          "A good project should not only run. It should also be understandable, memorable, and worth exploring further.",
-      },
-    ],
-    projects: [
-      {
-        id: "meow-cup",
-        index: "01",
-        title: "Meow Cup Landing",
-        stack: "React / GSAP / Vite",
-        summary:
-          "A product visual page rebuilt into a stronger campaign-style landing site with better image storytelling, motion, and mobile structure.",
-        bullets: [
-          "Reworked layout around image content instead of generic sections",
-          "Improved visual hierarchy and motion pacing",
-          "Separated content, components, and animation logic",
-        ],
-        repo: "https://github.com/coniern/meow-cup-landing",
-      },
-      {
-        id: "thesis-management",
-        index: "02",
-        title: "Thesis Management System",
-        stack: "Vue 3 / Spring Boot / MySQL",
-        summary:
-          "A graduation thesis management system covering topic selection, progress, uploads, and administration across multiple user roles.",
-        bullets: [
-          "A real workflow-oriented full-stack project",
-          "Shows frontend organization and backend business understanding",
-          "Repository structure and README were cleaned for portfolio use",
-        ],
-        repo: "https://github.com/coniern/Thesis-management-system",
-      },
-      {
-        id: "project-platform",
-        index: "03",
-        title: "Project Management Platform",
-        stack: "Java / Spring Boot / JSP",
-        summary:
-          "A project management platform prototype used to show Java backend structure understanding and repository cleanup discipline.",
-        bullets: [
-          "Useful as a backend-focused portfolio project",
-          "Reflects technical-debt awareness and repo hygiene work",
-          "README and tracked clutter were significantly improved",
-        ],
-        repo: "https://github.com/coniern/project-JavaWeb-system",
-      },
-    ],
-    resume: {
-      title: "Resume Snapshot",
-      subtitle: "Positioned toward full-stack and AI application roles.",
-      positioning:
-        "I combine frontend, backend, product communication, repository polish, and AI implementation into one delivery profile.",
-      roles: [
-        "Full-Stack Developer",
-        "AI Application Engineer",
-        "Frontend Engineer with product focus",
-        "Generalist engineer in startup teams",
-      ],
-      skills: [
-        {
-          title: "Frontend",
-          text: "React / Vue 3 / Vite / GSAP / Responsive layout / Element Plus",
-        },
-        {
-          title: "Backend",
-          text: "Java / Spring Boot / Node.js / REST API / JWT / MyBatis Plus",
-        },
-        {
-          title: "AI / Workflow",
-          text: "Prompt design / LLM integration / workflow automation / embedded AI features",
-        },
-      ],
-    },
-    contact: {
-      title: "Contact",
-      subtitle: "Open to full-stack, frontend, and AI application opportunities.",
+      label: "联系我",
+      title: "如果你想找一个能把项目讲清楚、做完整、也整理得像作品的人，可以直接联系我。",
+      note: "邮件最直接，GitHub 能看到完整仓库轨迹。",
       links: [
         {
           label: "Email",
@@ -258,9 +305,316 @@ export const siteData = {
           href: "https://github.com/coniern",
         },
       ],
-      actionTitle: "Leave an entry point.",
-      actionBody: "If you are looking for someone who can handle product, code, repository cleanup, and delivery together, reach out directly.",
-      actionButton: "Contact now",
+      closing: "开放全栈、前端与 AI 应用相关机会。",
+    },
+  },
+  en: {
+    meta: {
+      name: "Tongxue Xiao",
+      role: "Full-Stack Developer / AI Application Engineer",
+      email: "2325826552@qq.com",
+      github: "https://github.com/coniern",
+      githubHandle: "coniern",
+    },
+    nav: [
+      { id: "hero", label: "Home" },
+      { id: "about", label: "About" },
+      { id: "work", label: "Works" },
+      { id: "archive", label: "Archive" },
+      { id: "resume", label: "Resume" },
+      { id: "contact", label: "Contact" },
+    ],
+    hero: {
+      eyebrow: "portfolio notes / handwritten edition",
+      title: ["Turn repos", "into work."],
+      subtitle:
+        "I care less about making a page merely look polished and more about whether a project can be understood, delivered cleanly, and framed like a real body of work.",
+      badges: ["React", "Vue", "Java", "AI Workflows"],
+      notes: [
+        "12 public repositories, fully listed",
+        "8 featured projects in the main gallery",
+        "The site reads like notebook pages, not a startup landing page",
+      ],
+      primary: "View featured work",
+      secondary: "Open full archive",
+    },
+    about: {
+      label: "About",
+      title: "What I want is not just code that runs, but work that can speak for itself.",
+      note: "The handwritten and hand-drawn feel is not decoration. It gives the content air, pace, and memory.",
+      cards: [
+        {
+          id: "delivery",
+          title: "Delivery",
+          body: "I care about interface, workflow, code structure, repository polish, and how the final output is presented together.",
+        },
+        {
+          id: "clarity",
+          title: "Clarity",
+          body: "A project should not only function. It should tell people quickly what it is, why it matters, and why it deserves attention.",
+        },
+        {
+          id: "systems",
+          title: "Systems",
+          body: "I prefer turning scattered features and experiments into coherent work with boundaries, structure, and a readable story.",
+        },
+      ],
+    },
+    works: {
+      label: "Featured Work",
+      title: "The main gallery only holds the repositories that best represent how I currently build and present software.",
+      note: "Each card uses a monochrome abstract cover rather than a literal screenshot, so the whole page stays coherent.",
+    },
+    featuredProjects: [
+      {
+        id: "meow-cup-landing",
+        index: "01",
+        title: "Meow Cup Landing",
+        description:
+          "An editorial landing page built around product imagery, page rhythm, and a stronger sense of visual storytelling.",
+        stack: "React / GSAP / Vite",
+        category: "Frontend storytelling",
+        coverType: "editorial",
+        repo: "https://github.com/coniern/meow-cup-landing",
+      },
+      {
+        id: "live-body-glass",
+        index: "02",
+        title: "Live Body Glass",
+        description:
+          "A realtime browser-side body transparency experiment using MediaPipe, p5.js, and WebGL to show creative coding and visual interaction work.",
+        stack: "JavaScript / MediaPipe / WebGL",
+        category: "Creative experiment",
+        coverType: "vision",
+        repo: "https://github.com/coniern/live-body-glass",
+      },
+      {
+        id: "thesis-management-system",
+        index: "03",
+        title: "Thesis Management System",
+        description:
+          "A workflow-heavy graduation thesis platform across admin, teacher, and student roles, showing real business flow and permissions thinking.",
+        stack: "Vue 3 / Spring Boot / MySQL",
+        category: "Full-stack system",
+        coverType: "system",
+        repo: "https://github.com/coniern/Thesis-management-system",
+      },
+      {
+        id: "clairvault-tasks",
+        index: "04",
+        title: "Clairvault Tasks",
+        description:
+          "A Vue 3 and Pinia task manager framed as a compact productivity portfolio piece with interface and structure focus.",
+        stack: "Vue 3 / Pinia / UI Design",
+        category: "Product exercise",
+        coverType: "productivity",
+        repo: "https://github.com/coniern/clairvault-tasks",
+      },
+      {
+        id: "project-javaweb-system",
+        index: "05",
+        title: "Project JavaWeb System",
+        description:
+          "A backend-leaning Java web project used to demonstrate system structure understanding, cleanup discipline, and repository framing.",
+        stack: "Java / Spring Boot / JSP",
+        category: "Backend structure",
+        coverType: "backend",
+        repo: "https://github.com/coniern/project-JavaWeb-system",
+      },
+      {
+        id: "vue-rabbit",
+        index: "06",
+        title: "Vue Rabbit",
+        description:
+          "A commerce-oriented Vue practice project useful for showing large front-end organization, page composition, and business UI handling.",
+        stack: "Vue / Commerce UI",
+        category: "Frontend product work",
+        coverType: "commerce",
+        repo: "https://github.com/coniern/vue-rabbit",
+      },
+      {
+        id: "linear-regression-practice",
+        index: "07",
+        title: "Linear Regression Practice",
+        description:
+          "A machine learning study repository shaped into a displayable project, focused on notes, experiments, and readable learning output.",
+        stack: "Python / ML Notes",
+        category: "AI study",
+        coverType: "ml",
+        repo: "https://github.com/coniern/linear-regression-practice",
+      },
+      {
+        id: "personal-portfolio-site",
+        index: "08",
+        title: "Personal Portfolio Site",
+        description:
+          "The portfolio site itself, showing how I integrate repository curation, copy, visual language, and page structure into one output.",
+        stack: "React / Vite / Portfolio Design",
+        category: "Self-presentation",
+        coverType: "portfolio",
+        repo: "https://github.com/coniern/personal-portfolio-site",
+      },
+    ],
+    archive: {
+      label: "Full Archive",
+      title: "The public archive should be broader than the featured gallery, so everything stays visible here.",
+      note: "The gallery is curated for representation. The archive keeps the full trail, including duplicates, experiments, and practice repos.",
+    },
+    repoArchive: [
+      {
+        id: "clairvault-tasks",
+        label: "clairvault-tasks",
+        description: "Glassmorphism ToDo portfolio app built with Vue 3 and Pinia.",
+        language: "Vue",
+        type: "Featured",
+        repo: "https://github.com/coniern/clairvault-tasks",
+      },
+      {
+        id: "live-body-glass",
+        label: "live-body-glass",
+        description: "Realtime browser-side body invisibility effect with MediaPipe, p5.js, and WebGL.",
+        language: "JavaScript",
+        type: "Featured",
+        repo: "https://github.com/coniern/live-body-glass",
+      },
+      {
+        id: "personal-portfolio-site",
+        label: "personal-portfolio-site",
+        description: "Personal portfolio website for Tongxue Xiao.",
+        language: "JavaScript",
+        type: "Featured",
+        repo: "https://github.com/coniern/personal-portfolio-site",
+      },
+      {
+        id: "meow-cup-landing",
+        label: "meow-cup-landing",
+        description: "Editorial product landing page for a ceramic cat cup.",
+        language: "JavaScript",
+        type: "Featured",
+        repo: "https://github.com/coniern/meow-cup-landing",
+      },
+      {
+        id: "Thesis-management-system",
+        label: "Thesis-management-system",
+        description: "Graduation thesis management system.",
+        language: "Vue",
+        type: "Featured",
+        repo: "https://github.com/coniern/Thesis-management-system",
+      },
+      {
+        id: "Graduation-Thesis-Management-System",
+        label: "Graduation-Thesis-Management-System",
+        description: "Earlier thesis system repository kept as process history.",
+        language: "Vue",
+        type: "Archived version",
+        repo: "https://github.com/coniern/Graduation-Thesis-Management-System",
+      },
+      {
+        id: "project-JavaWeb-system",
+        label: "project-JavaWeb-system",
+        description: "Java web code hosting platform project.",
+        language: "Java",
+        type: "Featured",
+        repo: "https://github.com/coniern/project-JavaWeb-system",
+      },
+      {
+        id: "linear-regression-practice",
+        label: "linear-regression-practice",
+        description: "Linear regression practice and AI study notes.",
+        language: "Python",
+        type: "Featured",
+        repo: "https://github.com/coniern/linear-regression-practice",
+      },
+      {
+        id: "vue-rabbit-2026",
+        label: "vue-rabbit-2026",
+        description: "2026 refresh branch of the Vue Rabbit practice project.",
+        language: "Vue",
+        type: "Iteration",
+        repo: "https://github.com/coniern/vue-rabbit-2026",
+      },
+      {
+        id: "vue-rabbit",
+        label: "vue-rabbit",
+        description: "Main Vue Rabbit commerce practice repository.",
+        language: "Vue",
+        type: "Featured",
+        repo: "https://github.com/coniern/vue-rabbit",
+      },
+      {
+        id: "demo",
+        label: "demo",
+        description: "Mixed demo and experiment repository.",
+        language: "Mixed",
+        type: "Experiment",
+        repo: "https://github.com/coniern/demo",
+      },
+      {
+        id: "scratch-repo",
+        label: "-",
+        description: "A minimal scratch / placeholder public repository kept in the timeline.",
+        language: "Unknown",
+        type: "Placeholder",
+        repo: "https://github.com/coniern/-",
+      },
+    ],
+    resume: {
+      label: "Resume Snapshot",
+      title: "I fit best in work that needs engineering, presentation, and actual completion at the same time.",
+      note: "More than a single specialization, I work across frontend, backend, repository cleanup, and how the result is framed.",
+      cards: [
+        {
+          id: "positioning",
+          title: "Positioning",
+          body: "Full-stack leaning, with strong interest in product communication. I like turning features, structure, interface, and repository polish into one coherent output.",
+        },
+        {
+          id: "roles",
+          title: "Target roles",
+          items: [
+            "Full-Stack Developer",
+            "AI Application Engineer",
+            "Frontend Engineer with product focus",
+            "Generalist engineer in startup teams",
+          ],
+        },
+        {
+          id: "stack",
+          title: "Stack",
+          groups: [
+            {
+              title: "Frontend",
+              text: "React / Vue 3 / Vite / GSAP / Responsive layout / page storytelling",
+            },
+            {
+              title: "Backend",
+              text: "Java / Spring Boot / Node.js / REST API / JWT / MyBatis Plus",
+            },
+            {
+              title: "AI / Workflow",
+              text: "Prompt design / LLM integration / workflow automation / embedded AI features",
+            },
+          ],
+        },
+      ],
+    },
+    contact: {
+      label: "Contact",
+      title: "If you want someone who can explain, build, and finish a project like a piece of work, reach out directly.",
+      note: "Email is the fastest route. GitHub shows the full repository trail.",
+      links: [
+        {
+          label: "Email",
+          value: "2325826552@qq.com",
+          href: "mailto:2325826552@qq.com",
+        },
+        {
+          label: "GitHub",
+          value: "github.com/coniern",
+          href: "https://github.com/coniern",
+        },
+      ],
+      closing: "Open to full-stack, frontend, and AI application opportunities.",
     },
   },
 };
